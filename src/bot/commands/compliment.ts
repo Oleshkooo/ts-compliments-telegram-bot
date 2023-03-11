@@ -1,4 +1,4 @@
-import { BotCommand } from 'types'
+import { BotCommand } from '../../types'
 import { capitalizeFirstLetter, getCompliment } from '../../services'
 
 export const complimentCommand: BotCommand = async ctx => {

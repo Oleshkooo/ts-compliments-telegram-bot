@@ -15,6 +15,7 @@ const initBot = () => {
     bot.use(middlewares_1.defaultMiddleware);
     bot.start(commands_1.startCommand);
     bot.command('compliment', commands_1.complimentCommand);
+    bot.command('compliment_for_my', (0, commands_1.complimentForMyCommand)(bot));
     console.log('[BOT] Initialized');
     return bot;
 };

@@ -1,4 +1,4 @@
-import { BotCommand } from 'types'
+import { BotCommand } from '../../types'
 
 export const startCommand: BotCommand = async ctx => {
     const name = ctx?.from?.first_name || 'незнайомець'

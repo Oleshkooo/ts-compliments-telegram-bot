@@ -1,7 +1,7 @@
 import { config } from 'dotenv'
 import { Context, Telegraf } from 'telegraf'
 
-import { complimentCommand, startCommand } from './commands'
+import { complimentCommand, startCommand, complimentForMyCommand } from './commands'
 import { defaultMiddleware } from './middlewares'
 
 config()
@@ -21,6 +21,7 @@ export const initBot: InitBot = () => {
 
     bot.start(startCommand)
     bot.command('compliment', complimentCommand)
+    bot.command('compliment_for_my', complimentForMyCommand(bot))
 
     console.log('[BOT] Initialized')
 
